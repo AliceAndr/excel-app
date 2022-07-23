@@ -3,6 +3,13 @@ import {ExcelComponent} from '@core/ExcelComponent';
 export class Toolbar extends ExcelComponent {
   static className = 'excel__toolbar'; // jshint ignore:line
 
+  constructor($root) {
+    super($root, {
+      name: 'Toolbar',
+      listeners: ['click']
+    });
+  }
+
   toHTML() {
     return `
     <div class="button excel__toolbar-button">
@@ -29,5 +36,9 @@ export class Toolbar extends ExcelComponent {
           <i class="material-icons">format_underline</i>
         </div>
     `;
+  }
+
+  onClick(event) {
+    console.log(event.target);
   }
 }
