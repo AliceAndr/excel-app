@@ -8,11 +8,14 @@ export function resizeHandler($root, event) {
   const sideProp = type === 'col' ? 'bottom' : 'right';
   let value;
 
-  $resizer.css({opacity: 1, [sideProp]: '-5000px'});
+  $resizer.css({
+    opacity: 1,
+    [sideProp]: '-5000px'
+  });
 
   document.onmousemove = e => {
     if (type === 'col') {
-      const delta = Math.floor(e.pageX - coords.right);
+      const delta = e.pageX - coords.right;
       value = coords.width + delta;
       $resizer.css({right: -delta + 'px'});
     } else {
@@ -33,6 +36,11 @@ export function resizeHandler($root, event) {
     } else {
       $parent.css({height: value + 'px'});
     }
-    $resizer.css({opacity: 0, bottom: 0, right: 0});
+
+    $resizer.css({
+      opacity: 0,
+      bottom: 0,
+      right: 0
+    });
   };
 }
