@@ -57,8 +57,7 @@ function toColumn({col, index, width}) {
 
 function createRow(index, content, state = {}) {
   const resize = index ?
-   '<div class="row-resize" data-resize="row"></div>' :
-   '';
+   '<div class="row-resize" data-resize="row"></div>' : '';
   const height = getHeight(state, index);
   return `
     <div 

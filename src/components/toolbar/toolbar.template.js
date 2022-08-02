@@ -35,15 +35,15 @@ export function createToolbar(s) {
     },
     {
       value: {fontWeight: s['fontWeight'] === 'bold' ? // jshint ignore:line
-       'normal' :
-        'bold'},
+       'normal' : 'bold'},
       icon: 'format_bold',
       active: s['fontWeight'] === 'bold' // jshint ignore:line
     },
     {
       value: {
-        textDecoration: s['textDecoration'] === 'underline' ?
-        'none' : 'underline'
+        textDecoration:
+        s['textDecoration'] === 'underline' ? // jshint ignore:line
+         'none' : 'underline'
       },
       icon: 'format_underlined',
       active: s['textDecoration'] === 'underline' // jshint ignore:line

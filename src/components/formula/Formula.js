@@ -2,7 +2,7 @@ import {ExcelComponent} from '@core/ExcelComponent';
 import {$} from '@core/dom';
 
 export class Formula extends ExcelComponent {
-  static className = 'excel__formula' // jshint ignore:line
+  static className = 'excel__formula'; // jshint ignore:line
 
   constructor($root, options) {
     super($root, {
@@ -47,4 +47,3 @@ export class Formula extends ExcelComponent {
     }
   }
 }
-
