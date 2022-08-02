@@ -9,7 +9,7 @@ import {defaultStyles} from '@/constants';
 import {parse} from '@core/parse';
 
 export class Table extends ExcelComponent {
-  static className = 'excel__table' // jshint ignore:line
+  static className = 'excel__table'; // jshint ignore:line
 
   constructor($root, options) {
     super($root, {
